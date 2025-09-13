@@ -34,7 +34,7 @@ class VulnerabilityDB:
     def get_plugin_vulnerabilities(self, plugin_slug):
         return self.vulnerabilities_by_slug.get(plugin_slug, [])
 
-    def get_all_plugin_slugs(self):
+    def pluginsXslugs(self):
         return self.all_known_plugin_slugs
 
     def is_vulnerable(self, plugin_slug, current_version_str, specific_cve_id=None):
