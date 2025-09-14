@@ -43,7 +43,7 @@ source venv/bin/activate
 pip3 install -r requirements.txt
 
 #Run Tool
-python3 main.py
+python3 wphunter.py
 
 ```
 ## 💻 Usage
