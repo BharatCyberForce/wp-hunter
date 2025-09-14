@@ -54,4 +54,5 @@ class WordPressParser:
             for user_obj in json_data:
                 if isinstance(user_obj, dict) and 'slug' in user_obj:
                     users.append(user_obj['slug'])
-        return users
+        return users #You can steal the code, but you wll never steal the mind that created it ~ Indian Cyber Force 
+
