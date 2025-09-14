@@ -148,7 +148,7 @@ $ wphunter --url https://pkmkb.pk
 │         ├── Affected Versions: <= 5.9.4                                                                                                                                        
 │         └── Description: Open redirect in Contact Form 7 before 5.9.5.  
 
-
+```
 
 ## ⚠️ Disclaimer  
 
