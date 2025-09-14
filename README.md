@@ -152,7 +152,7 @@ $ wphunter --url https://pkmkb.pk
 
 ## ⚠️ Disclaimer  
 
-This project is intended **for educational and authorized penetration testing purposes only**.  
+This project is for **educational and authorized penetration testing purposes only**.  
 Do **NOT** use against systems without explicit written permission.  
 Unauthorized usage may violate laws.  
 
