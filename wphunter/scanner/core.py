@@ -114,8 +114,12 @@ class WPScanner:
             async with semaphore:
                 await self._scan_single_target(target)
         tasks = [bounded_scan(target_url) for target_url in targets]
-        await async_tqdm.gather(*tasks, desc="Scanning Targets", unit="target")
-        await self.http_client.close()
+        try:
+            await async_tqdm.gather(*tasks, desc="Scanning Targets", unit="target")
+        except asyncio.exceptions.CancelledError:
+            print("\nExiting...")
+        finally:
+            await self.http_client.close()
         return self.full_scan_results
 
     def get_vulnerable_sites_data(self):
