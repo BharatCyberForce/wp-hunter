@@ -149,3 +149,23 @@ $ wphunter --url https://pkmkb.pk
 │         ├── Severity: MEDIUM                                                                                                                                                   
 │         ├── Affected Versions: <= 5.9.4                                                                                                                                        
 │         └── Description: Open redirect in Contact Form 7 before 5.9.5.  
+
+
+
+## ⚠️ Disclaimer  
+
+This project is intended **for educational and authorized penetration testing purposes only**.  
+Do **NOT** use against systems without explicit written permission.  
+Unauthorized usage may violate laws.  
+
+---
+
+## ⭐ Support  
+
+If you find **WPHunter** useful:  
+
+- ⭐ **Star the repo on GitHub**  
+- 🔗 **Share it with your community**  
+- 💬 **Contribute or provide feedback**  
+
+Your support helps the project grow! 🚀
