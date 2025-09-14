@@ -84,7 +84,7 @@ class WPScanner:
                             'vulnerability': vuln_info
                         })
                         self.logger.add_vuln_find3r(target_url, plugin['plugin_slug'], plugin['plugin_version'], vuln_info)
-            if self.config.enumerate_users:
+            """if self.config.enumerate_users:
                 users_api_url = urljoin(target_url, '/wp-json/wp/v2/users')
                 users_response = await self.http_client.get(users_api_url)
                 if users_response and users_response.status_code == 200:
@@ -106,7 +106,7 @@ class WPScanner:
         except Exception as e:
             scan_result['error'] = str(e)
         finally:
-            self.full_scan_results[target_url] = scan_result
+            self.full_scan_results[target_url] = scan_result"""
 
     async def start_scan(self, targets):
         semaphore = asyncio.Semaphore(self.config.threads)
