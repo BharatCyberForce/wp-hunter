@@ -1,0 +1,8 @@
+colorama
+httpx
+packaging
+rich
+tqdm
+setuptools
+wheel
+async
