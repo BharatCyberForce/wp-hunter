@@ -44,7 +44,7 @@ async def main():
     console.print(banner_panel)
 
     parser = argparse.ArgumentParser(
-        description=f"{Fore.CYAN}A Mass Wordpress Vulnerability Scanner.{Style.RESET_ALL}",
+        description=f"{Fore.CYAN}A Mass Wordpress Vulnerability Scanner{Style.RESET_ALL}",
         formatter_class=argparse.RawTextHelpFormatter
     )
     group = parser.add_mutually_exclusive_group(required=True)
@@ -60,7 +60,7 @@ async def main():
         "--threads",
         type=int,
         default=50,
-        help="Number of concurrent connections for faster scanning (default: 50)"
+        help="Number of threads"
     )
     parser.add_argument(
         "--silent",
