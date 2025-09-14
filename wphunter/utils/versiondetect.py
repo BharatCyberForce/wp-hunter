@@ -41,7 +41,7 @@ class VersionManager:
             print(f"Error: Local version file not found at {version_file_path}")
         except Exception as e:
             print(f"Error reading local version: {e}")
-        return "0.0.0"
+        return "25.1.0"
 
     @staticmethod
     async def update_checker(logger): #check version outdated or latest (version compare part)
@@ -75,7 +75,5 @@ class VersionManager:
     @staticmethod
     def updatewarn(logger):
 
-        logger.log("To update WPHunter, If you cloned the repository, navigate to the WPHunter directory and run:", level='info')
-        logger.log("git pull origin main", level='info')
-        logger.log("If You Downloaded ZIP, Please redownload latest Version", level='info')
+        logger.log("Please Redownload Latest Version", level='info')
         logger.log(f"{VersionManager.icf_github}/archive/refs/heads/main.zip", level='info')
