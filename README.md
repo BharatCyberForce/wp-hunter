@@ -40,7 +40,7 @@ python3 -m venv venv
 source venv/bin/activate
 
 # Requirements Install
-pip3 install -r requirement.txt
+pip3 install -r requirements.txt
 
 
 ```
