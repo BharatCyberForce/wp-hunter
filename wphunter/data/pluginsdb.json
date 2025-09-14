@@ -144,7 +144,6 @@
         "description": "Arbitrary file deletion due to insufficient path validation in delete_tmp_uploaded_file() (affected up to 17.8)."
       }
     ],
-    "note": "Verify actual slug on your install."
   }
 ]
 
