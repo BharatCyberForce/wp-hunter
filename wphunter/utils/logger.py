@@ -230,3 +230,5 @@ class Logger:
                         f.write(f"{url}\n")
             except Exception as e:
                 self.log(f"Error saving report for {plugin_slug}: {e}", level='error')
+
+#You can steal the code, but you will never steal the mind that created it ~ Indian Cyber Force 
