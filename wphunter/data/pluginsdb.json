@@ -1,1 +1,150 @@
+[
+  {
+    "plugin_slug": "elementor",
+    "vulnerabilities": [
+      {
+        "id": "CVE-2022-29455",
+        "type": "CWE-79",
+        "severity": "HIGH",
+        "affected_versions": {
+          "less_than_or_equal": "3.5.5"
+        },
+        "description": "Stored Cross-Site Scripting (XSS) in Elementor (fixed in later 3.x releases)."
+      },
+      {
+        "id": "CVE-2022-1329",
+        "type": "CWE-862",
+        "severity": "CRITICAL",
+        "affected_versions": {
+          "less_than_or_equal": "3.6.4"
+        },
+        "description": "Access control / privilege escalation issues in Elementor/Pro components."
+      },
+      {
+        "id": "CVE-2023-47505",
+        "type": "CWE-79",
+        "severity": "MEDIUM",
+        "affected_versions": {
+          "less_than_or_equal": "3.16.4"
+        },
+        "description": "Cross-site scripting (XSS) reported for Elementor."
+      },
+      {
+        "id": "CVE-2024-5416",
+        "type": "CWE-79",
+        "severity": "HIGH",
+        "affected_versions": {
+          "less_than_or_equal": "3.23.4"
+        },
+        "description": "Stored XSS in multiple widgets' URL parameter in Elementor."
+      },
+      {
+        "id": "CVE-2023-48777",
+        "type": "CWE-434",
+        "severity": "CRITICAL",
+        "affected_versions": {
+          "less_than_or_equal": "3.18.1"
+        },
+        "description": "Unauthenticated file upload leading to possible RCE in older Elementor versions (reported 2023)."
+      },
+      {
+        "id": "CVE-2024-37437",
+        "type": "CWE-79",
+        "severity": "HIGH",
+        "affected_versions": {
+          "less_than_or_equal": "3.22.1"
+        },
+        "description": "Stored XSS in Elementor (reported July 2024)."
+      }
+    ]
+  },
+  {
+    "plugin_slug": "elementor-pro",
+    "vulnerabilities": [
+      {
+        "id": "CVE-2024-8494",
+        "type": "CWE-200",
+        "severity": "MEDIUM",
+        "affected_versions": {
+          "less_than_or_equal": "3.25.10"
+        },
+        "description": "Sensitive information exposure via elementor-template shortcode in Elementor Pro."
+      },
+      {
+        "id": "CVE-2025-3076",
+        "type": "CWE-79",
+        "severity": "MEDIUM",
+        "affected_versions": {
+          "less_than_or_equal": "3.29.0"
+        },
+        "description": "Stored XSS in 'button_text' parameter (Elementor Pro)."
+      },
+      {
+        "id": "CVE-2023-35050",
+        "type": "CWE-862",
+        "severity": "MEDIUM",
+        "affected_versions": {
+          "less_than_or_equal": "3.13.0"
+        },
+        "description": "Missing authorization in Elementor Pro (reported 2023)."
+      }
+    ]
+  },
+  {
+    "plugin_slug": "essential-addons-for-elementor",
+    "vulnerabilities": [
+      {
+        "id": "CVE-2023-32243",
+        "type": "CWE-287",
+        "severity": "CRITICAL",
+        "affected_versions": {
+          "greater_than_or_equal": "5.4.0",
+          "less_than_or_equal": "5.7.1"
+        },
+        "description": "Improper Authentication / Privilege Escalation in Essential Addons for Elementor."
+      }
+    ]
+  },
+  {
+    "plugin_slug": "the-plus-addons-for-elementor",
+    "vulnerabilities": [
+      {
+        "id": "CVE-2023-47178",
+        "type": "CWE-22",
+        "severity": "HIGH",
+        "affected_versions": {
+          "less_than_or_equal": "5.2.9"
+        },
+        "description": "Path traversal / local file include in The Plus Addons for Elementor."
+      }
+    ]
+  },
+  {
+    "plugin_slug": "woolementor",
+    "vulnerabilities": [
+      {
+        "id": "CVE-2024-4371",
+        "type": "CWE-502",
+        "severity": "CRITICAL",
+        "affected_versions": {
+          "less_than_or_equal": "4.4.1"
+        },
+        "description": "PHP Object Injection (deserialization) in CoDesigner/Woolementor."
+      },
+  {
+    "plugin_slug": "woocommerce-support-ticket-system-VERIFY_SLUG",
+    "vulnerabilities": [
+      {
+        "id": "CVE-2024-10625",
+        "type": "CWE-22",
+        "severity": "CRITICAL",
+        "affected_versions": {
+          "less_than_or_equal": "17.8"
+        },
+        "description": "Arbitrary file deletion due to insufficient path validation in delete_tmp_uploaded_file() (affected up to 17.8)."
+      }
+    ],
+    "note": "Verify actual slug on your install."
+  }
+]
 
