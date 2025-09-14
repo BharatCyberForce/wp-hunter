@@ -96,7 +96,7 @@ WPHunter supports multiple output formats for flexible reporting:
 
 ## 📸 Example Output  
 
-Example of scanning a target with user enumeration enabled:  
+Example of scanning a target:  
 
 ```bash
 $ wphunter --url https://pkmkb.pk
