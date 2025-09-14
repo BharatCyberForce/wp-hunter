@@ -16,7 +16,7 @@ It allows **mass scanning of WordPress sites**.
 
 ## ✨ Features  
 
-✔ **Mass Scanning** – Scan a single URL or hundreds from a file.  
+✔ **Mass Scanning** – multi sites scan at one time.  
 ✔ **High Performance** – Asynchronous I/O with configurable concurrency.  
 ✔ **Vulnerability Detection** – Compare plugin versions against a local vulnerability database.  
 ✔ **User Enumeration** – Discover usernames via the WordPress REST API.  
