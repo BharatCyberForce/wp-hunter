@@ -39,9 +39,8 @@ cd wp-hunter
 python3 -m venv venv
 source venv/bin/activate
 
-# Install in editable mode
-pip install -e .
-
+# Requirements Install
+pip3 install -r requirement.txt
 
 
 ```
