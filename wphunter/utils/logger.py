@@ -98,9 +98,9 @@ class Logger:
                 plugin_node = target_node.add(plugin_node_text)
                 
                 plugin_node.add(Text(f"ID: ", style="white") + Text(vuln_id, style="green"))
-                plugin_node.add(Text(f"Type: ", style="white") + Text(vuln_type, style="light_green"))
+                plugin_node.add(Text(f"Type: ", style="white") + Text(vuln_type, style="light_green")) 
                 plugin_node.add(Text(f"Severity: ", style="white") + Text(vuln_severity.upper(), style=self.severity_colors.get(vuln_severity, 'white')))
-                plugin_node.add(Text(f"Affected Versions: ", style="white") + Text(affected_range if affected_range else 'N/A', style="red"))
+                plugin_node.add(Text(f"Affected Version: ", style="white") + Text(affected_range if affected_range else 'N/A', style="red"))
                 plugin_node.add(Text(f"Description: ", style="white") + Text(vuln_desc, style="yellow"))
 
         panel = Panel(report_tree, title="[bold red]OUTPUT[/bold red]", border_style="bold red") #panel
