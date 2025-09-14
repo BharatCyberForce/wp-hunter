@@ -89,7 +89,7 @@ async def main():
         "--timeout",
         type=int,
         default=5,
-        help="HTTP request timeout in seconds."
+        help="request timeout in seconds."
     )
     parser.add_argument(
         "--retries",
