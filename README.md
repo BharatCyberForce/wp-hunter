@@ -42,27 +42,29 @@ source venv/bin/activate
 # Requirements Install
 pip3 install -r requirements.txt
 
+#Run Tool
+python3 main.py
 
 ```
 ## 💻 Usage
 
 ### See available options:
 
-```wphunter --help```
+```wphunter.py --help```
 ### Scan Single Target
-```wphunter --url https://pkmkb.pk```
+```wphunter.py --url https://pkmkb.pk```
 ### Mass Scan
-```wphunter --targets targets.txt --threads 200 --output output.txt```
+```wphunter.py --targets targets.txt --threads 200 --output output.txt```
 ### Mass Scan With Threads
-```wphunter --targets targets.txt --threads 200 --output output.txt```
+```wphunter.py --targets targets.txt --threads 200 --output output.txt```
 ### User Enumurate
-```wphunter --url https://pkmkb.pk --users```
+```wphunter.py --url https://pkmkb.pk --users```
 ### Specific Plugin Scan
-```wphunter --url https://pkmkb.pk --plugin woocommerce```
+```wphunter.py --url https://pkmkb.pk --plugin woocommerce```
 ### Specific CVE Scan
-```wphunter --url https://pkmkb.pk --cve CVE-2021-34624```
+```wphunter.py --url https://pkmkb.pk --cve CVE-2021-34624```
 ### Save Vulnerable Sites In Vulnerable Plugin Name
-```wphunter --targets targets.txt --save-by-plugin```
+```wphunter.py --targets targets.txt --save-by-plugin```
 
 
 ## ⚙️ Command-Line Options  
