@@ -12,8 +12,6 @@
 
 It allows **mass scanning of WordPress sites**, detects **vulnerable plugins**, **enumerates users**, and saves results in multiple formats for easy analysis.  
 
-Built on top of **asyncio** and **httpx**, it performs **concurrent, non-blocking requests** for maximum performance.  
-
 ---
 
 ## ✨ Features  
