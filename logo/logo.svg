@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1024" height="256" viewBox="0 0 1024 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1024" y2="256" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#00E5FF"/>
+      <stop offset="1" stop-color="#3B82F6"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Icon (same style as the square) -->
+  <g transform="translate(24,24)">
+    <circle cx="104" cy="104" r="88" stroke="url(#g)" stroke-width="10" fill="none" filter="url(#glow)"/>
+    <circle cx="104" cy="104" r="56" stroke="url(#g)" stroke-width="6" opacity="0.85"/>
+    <line x1="104" y1="12" x2="104" y2="36" stroke="url(#g)" stroke-width="8"/>
+    <line x1="104" y1="172" x2="104" y2="196" stroke="url(#g)" stroke-width="8"/>
+    <line x1="12" y1="104" x2="36" y2="104" stroke="url(#g)" stroke-width="8"/>
+    <line x1="172" y1="104" x2="196" y2="104" stroke="url(#g)" stroke-width="8"/>
+    <circle cx="104" cy="104" r="7" fill="#00E5FF"/>
+    <path d="M146 88 L170 104 L146 120" fill="none" stroke="url(#g)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M60 86 L70 128 L80 104 L90 128 L100 86" fill="none" stroke="url(#g)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+    <path d="M112 86 L112 128" stroke="url(#g)" stroke-width="7" stroke-linecap="round" opacity="0.95"/>
+    <path d="M112 90 A18 18 0 1 1 112 122" fill="none" stroke="url(#g)" stroke-width="7" opacity="0.95"/>
+  </g>
+
+  <!-- Wordmark -->
+  <g transform="translate(240,60)">
+    <text x="0" y="48" font-size="56" font-weight="800" font-family="Inter, Poppins, 'Segoe UI', Arial, sans-serif" fill="url(#g)" letter-spacing="2">WP</text>
+    <text x="140" y="48" font-size="56" font-weight="700" font-family="Inter, Poppins, 'Segoe UI', Arial, sans-serif" fill="#E6F6FF" opacity="0.95" letter-spacing="3">HUNTER</text>
+    <!-- underline accent -->
+    <rect x="0" y="70" width="380" height="6" fill="url(#g)" rx="3" />
+  </g>
+</svg>
