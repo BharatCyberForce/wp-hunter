@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="logo/logo.png" width="150" height="150">
+  <img src="logo/logo.svg" width="150" height="150">
 </p>
 
 # WPHunter  
