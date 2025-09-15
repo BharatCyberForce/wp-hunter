@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="logo/logo.png" width="150" height="150">
+</p>
+
 # WPHunter  
 *Mass WordPress Vulnerability Scanner*  
 
