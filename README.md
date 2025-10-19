@@ -13,8 +13,7 @@
 ## 📖 Overview  
 
 **WPHunter** is fastest WordPress vulnerability scanner designed for **Penetration Testers**  
-
-It allows **mass scanning of WordPress sites**.
+**mass scanning of WordPress sites**.
 
 ---
 
