@@ -12,6 +12,7 @@ from rich.tree import Tree
 from rich.console import Console
 from rich.text import Text
 from rich.panel import Panel
+from collections import defaultdict
 
 class Logger:
 
@@ -59,52 +60,80 @@ class Logger:
             'vulnerability': vuln_info
         })
 
-    def trees(self): #Tree Structure
+    def trees(self, full_results): #Tree Structure
 
-        if not self.vulnerable_findings:
-            print("No Vulnerabilities Found!.")
-            return
-
+        has_output = False
         report_tree = Tree(
             Text(f"Vulnerable Targets", style="bold cyan"),
             guide_style="red",
-            
         )
         
-        for target_url, findings in self.vulnerable_findings.items():
-            target_node = report_tree.add(Text(f"Target: ", style="white") + Text(target_url, style="cyan"))
+        for target_url, result in full_results.items():
+            is_vulnerable = result.get('vulnerable_plugins')
+            has_users = result.get('users')
             
-            for finding in findings:
-                plugin_slug = finding['plugin_slug']
-                plugin_version = finding['plugin_version']
-                vuln_info = finding['vulnerability']
+            # Skip targets that's may be non wordpress
+            if result.get('error') == 'Could not confirm WordPress installation':
+                continue
+            
+            if is_vulnerable or has_users:
+                has_output = True
                 
-                vuln_id = vuln_info.get('id', 'N/A')
-                vuln_type = vuln_info.get('type', 'N/A')
-                vuln_severity = vuln_info.get('severity', 'N/A').lower()
-                vuln_desc = vuln_info.get('description', 'No description provided.').split('\n')[0]
-                affected_versions = vuln_info.get('affected_versions', {})
-                affected_range = ""
+                target_node = report_tree.add(Text(f"Target: ", style="white") + Text(target_url, style="cyan"))
                 
-                if affected_versions.get('less_than_or_equal'):
-                    affected_range += f"<= {affected_versions['less_than_or_equal']}"
-                if affected_versions.get('greater_than_or_equal'):
-                    if affected_range:
-                        affected_range = f">= {affected_versions['greater_than_or_equal']} and {affected_range}"
-                    else:
-                        affected_range = f">= {affected_versions['greater_than_or_equal']}"
-                
-                plugin_node_text = Text.from_markup(f"Plugin: {plugin_slug} (Version: [red]{plugin_version}[/red])")
-                plugin_node = target_node.add(plugin_node_text)
-                
-                plugin_node.add(Text(f"ID: ", style="white") + Text(vuln_id, style="green"))
-                plugin_node.add(Text(f"Type: ", style="white") + Text(vuln_type, style="light_green"))
-                plugin_node.add(Text(f"Severity: ", style="white") + Text(vuln_severity.upper(), style=self.severity_colors.get(vuln_severity, 'white')))
-                plugin_node.add(Text(f"Affected Versions: ", style="white") + Text(affected_range if affected_range else 'N/A', style="red"))
-                plugin_node.add(Text(f"Description: ", style="white") + Text(vuln_desc, style="yellow"))
+                if result.get('error'):
+                    target_node.add(Text(f"Status: ", style="white") + Text(result.get('status', 'N/A'), style="yellow"))
+                    target_node.add(Text(f"Error: ", style="white") + Text(result.get('error', 'N/A'), style="red"))
+                elif is_vulnerable:
+                    
+                    #vulnerable plugins show group wise
+                    grouped_plugins = defaultdict(list)
+                    for finding in result['vulnerable_plugins']:
+                        grouped_plugins[finding['plugin_slug']].append(finding)
 
-        panel = Panel(report_tree, title="[bold red]OUTPUT[/bold red]", border_style="bold red") #panel
+                    plugin_node_group = target_node.add(Text("Vulnerable Plugins", style="bold yellow"))
+                    for plugin_slug, findings in grouped_plugins.items():
+                        # Get a single version
+                        plugin_version = findings[0]['plugin_version']
+                        
+                        plugin_node_text = Text.from_markup(f"Plugin: {plugin_slug} (Version: [red]{plugin_version}[/red])")
+                        plugin_node = plugin_node_group.add(plugin_node_text)
+                        
+                        for finding in findings:
+                            vuln_info = finding['vulnerability']
+                            vuln_id = vuln_info.get('id', 'N/A')
+                            vuln_type = vuln_info.get('type', 'N/A')
+                            vuln_severity = vuln_info.get('severity', 'N/A').lower()
+                            vuln_desc = vuln_info.get('description', 'No description provided.').split('\n')[0]
+                            affected_versions = vuln_info.get('affected_versions', {})
+                            affected_range = ""
+                            
+                            if affected_versions.get('less_than_or_equal'):
+                                affected_range += f"<= {affected_versions['less_than_or_equal']}"
+                            if affected_versions.get('greater_than_or_equal'):
+                                if affected_range:
+                                    affected_range = f">= {affected_versions['greater_than_or_equal']} and {affected_range}"
+                                else:
+                                    affected_range = f">= {affected_versions['greater_than_or_equal']}"
+                            
+                            finding_node = plugin_node.add(Text(f"ID: ", style="white") + Text(vuln_id, style="white"))
+                            finding_node.add(Text(f"Severity: ", style="white") + Text(vuln_severity.upper(), style=self.severity_colors.get(vuln_severity, 'white')))
+                            finding_node.add(Text(f"Type: ", style="white") + Text(vuln_type, style="light_green"))
+                            finding_node.add(Text(f"Affected Versions: ", style="white") + Text(affected_range if affected_range else 'N/A', style="red"))
+                            finding_node.add(Text(f"Description: ", style="white") + Text(vuln_desc, style="yellow"))
+
+                if has_users:
+                    user_node = target_node.add(Text("Found Users", style="bold magenta"))
+                    for user in result['users']:
+                        user_node.add(Text(f" - ", style="white") + Text(user, style="light_blue"))
+        
+        if not has_output:
+            print("No vulnerabilities or users found across scanned targets.")
+            return
+
+        panel = Panel(report_tree, title="[bold red]OUTPUT[/bold red]", border_style="bold red")
         self.console.print(panel)
+
 
     def jsonform(self, filename, results): #json format
 
@@ -144,55 +173,25 @@ class Logger:
                                 users_found
                             ]
                             writer.writerow(row)
+                    elif users_found != 'N/A':
+                        row = [
+                            target_url,
+                            result.get('status', 'N/A'),
+                            result.get('error', 'N/A'),
+                            'N/A',
+                            'N/A',
+                            'N/A',
+                            'N/A',
+                            'N/A',
+                            'N/A',
+                            'N/A',
+                            'N/A',
+                            users_found
+                        ]
+                        writer.writerow(row)
         except Exception as e:
-            self.log(f"Error saving CSV report to {filename}: {e}", level='error')
+            self.log(f"Error saving CSV info {filename}: {e}", level='error')
 
-    """def detailedinfo(self, filename, results): 
-
-        try:
-            with open(filename, 'w', encoding='utf-8') as f:
-                for target_url, result in results.items():
-                    f.write(f"Target: {target_url}\n")
-                    f.write(f"Status: {result.get('status', 'N/A')}\n")
-                    if result.get('error'):
-                        f.write(f"Error: {result['error']}\n")
-                    if result.get('users'):
-                        f.write(f"Users Found: {', '.join(result['users'])}\n")
-                    if result.get('vulnerable_plugins'):
-                        f.write("  Vulnerable Plugins:\n")
-                        for vp in result['vulnerable_plugins']:
-                            plugin_slug = vp.get('plugin_slug', 'N/A')
-                            plugin_version = vp.get('plugin_version', 'N/A')
-                            vuln_info = vp['vulnerability']
-                            vuln_id = vuln_info.get('id', 'N/A')
-                            vuln_type = vuln_info.get('type', 'N/A')
-                            vuln_severity = vuln_info.get('severity', 'N/A')
-                            vuln_desc = vuln_info.get('description', 'N/A')
-                            affected_versions = vuln_info.get('affected_versions', {})
-                            affected_range = ""
-                            if affected_versions.get('less_than_or_equal'):
-                                affected_range += f"<= {affected_versions['less_than_or_equal']}"
-                            if affected_versions.get('greater_than_or_equal'):
-                                if affected_range:
-                                    affected_range = f">= {affected_versions['greater_than_or_equal']} and {affected_range}"
-                                else:
-                                    affected_range = f">= {affected_versions['greater_than_or_equal']}"
-                            f.write(f"    - {plugin_slug} {plugin_version}\n")
-                            f.write(f"      Type: {vuln_type}\n")
-                            f.write(f"      Severity: {vuln_severity}\n")
-                            f.write(f"      Affected Range: {affected_range}\n")
-                            f.write(f"      CVE: {vuln_id}\n")
-                            f.write(f"      Description: {vuln_desc}\n")
-                    elif result.get('plugins'):
-                        f.write("  Scanned Plugins (No vulnerabilities found):\n")
-                        for plugin in result['plugins']:
-                            f.write(f"    - {plugin['plugin_slug']} {plugin['plugin_version']}\n")
-                    else:
-                        f.write("  No plugins found or scanned.\n")
-                    f.write("\n")
-        except Exception as e:
-            self.log(f"Error saving detailed TXT report to {filename}: {e}", level='error')
-"""
     def vulnxsites(self, filename, results):
 
         try:
@@ -203,7 +202,7 @@ class Logger:
         except Exception as e:
             self.log(f"Error saving vulnerable sites list to {filename}: {e}", level='error')
             
-    def savebypluginname(self):
+    def savebypluginname(self): #Save Vulnerable SiteS in Vulnerable plugins name txt File
 
         if not self.vulnerable_findings:
             return
@@ -230,5 +229,3 @@ class Logger:
                         f.write(f"{url}\n")
             except Exception as e:
                 self.log(f"Error saving report for {plugin_slug}: {e}", level='error')
-
-#You can steal the code, but you will never steal the mind that created it ~ Indian Cyber Force 
