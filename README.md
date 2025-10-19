@@ -33,11 +33,12 @@ It allows **mass scanning of WordPress sites**.
 
 ```bash
 git clone https://github.com/BharatCyberForce/wp-hunter.git
+
 cd wp-hunter
 
 pip3 install -r requirements.txt
 
-#Run Tool
+#Run
 python3 wphunter.py
 
 ```
