@@ -26,24 +26,15 @@ It allows **mass scanning of WordPress sites**.
 ✔ **User Enumeration** – Discover usernames via the WordPress REST API.  
 ✔ **Flexible Output** – Export reports in **TXT**, **CSV**, or **JSON**.  
 ✔ **Plugin/CVE-Specific Scanning** – Focus scans on a given plugin slug or CVE ID.  
-✔ **Professional Packaging** – Installable via `pip` and usable globally as `wphunter`.  
 
 ---
 
 ## 🚀 Installation  
 
-We recommend installing WPHunter inside a **virtual environment**.  
-
 ```bash
-# Clone the repository
 git clone https://github.com/BharatCyberForce/wp-hunter.git
 cd wp-hunter
 
-# Create and activate a virtual environment
-python3 -m venv venv
-source venv/bin/activate
-
-# Requirements Install
 pip3 install -r requirements.txt
 
 #Run Tool
