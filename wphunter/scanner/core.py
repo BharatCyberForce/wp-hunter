@@ -85,24 +85,26 @@ class WPScanner:
                         })
                         self.logger.add_vuln_find3r(target_url, plugin['plugin_slug'], plugin['plugin_version'], vuln_info)
             if self.config.enumerate_users:
+                self.logger.log(f"Attempting to enumerate users for {target_url}...", level='verbose')
                 users_api_url = urljoin(target_url, '/wp-json/wp/v2/users')
                 users_response = await self.http_client.get(users_api_url)
+
                 if users_response and users_response.status_code == 200:
                     try:
                         users_data = users_response.json()
                         users = self.parser.wpus3r_parse(users_data)
                         if users:
                             scan_result['users'] = users
-                    except json.JSONDecodeError as e:
-                        try:
-                            users_data = json.loads(users_response.content.decode('utf-8-sig'))
-                            users = self.parser.wpus3r_parse(users_data)
-                            if users:
-                                scan_result['users'] = users
-                        except Exception as inner_e:
-                            pass
+                            self.logger.log(f"Found {len(users)} users on {target_url}.", level='info')
+                        else:
+                            self.logger.log(f"User enumeration returned a 200 OK, but no users were found!", level='verbose')
+                    except json.JSONDecodeError:
+                        self.logger.log(f"Failed to decode JSON from {users_api_url}. The endpoint might not be returning valid JSON.", level='warning')
                     except Exception as e:
-                        pass
+                        self.logger.log(f"An unexpected error occurred while processing users API response for {target_url}: {e}", level='error')
+                else:
+                    status_code = users_response.status_code if users_response else 'N/A'
+                    self.logger.log(f"Could not enumerate users via API for {target_url}. Status: {status_code}", level='warning')
         except Exception as e:
             scan_result['error'] = str(e)
         finally:
@@ -114,12 +116,8 @@ class WPScanner:
             async with semaphore:
                 await self._scan_single_target(target)
         tasks = [bounded_scan(target_url) for target_url in targets]
-        try:
-            await async_tqdm.gather(*tasks, desc="Scanning Targets", unit="target")
-        except asyncio.exceptions.CancelledError:
-            print("\nExiting...")
-        finally:
-            await self.http_client.close()
+        await async_tqdm.gather(*tasks, desc="Scanning Targets", unit="target")
+        await self.http_client.close()
         return self.full_scan_results
 
     def get_vulnerable_sites_data(self):
