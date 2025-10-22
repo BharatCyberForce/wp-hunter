@@ -10,7 +10,7 @@
 
 ---
 
-## 📖 Overview  
+## 📖 Whats WP Hunter?  
 
 **WPHunter** is fastest WordPress vulnerability scanner designed for **Penetration Testers**  
 **mass scanning of WordPress sites**.
@@ -22,7 +22,7 @@
 ✔ **Mass Scanning** – multi sites scan at one time.  
 ✔ **High Performance** – Asynchronous I/O with configurable concurrency.  
 ✔ **Vulnerability Detection** – Compare plugin versions against a local vulnerability database.  
-✔ **User Enumeration** – Discover usernames via the WordPress REST API.  
+✔ **User Enumeration** – Discover wp login usernames.  
 ✔ **Flexible Output** – Export reports in **TXT**, **CSV**, or **JSON**.  
 ✔ **Plugin/CVE-Specific Scanning** – Focus scans on a given plugin slug or CVE ID.  
 
@@ -86,7 +86,7 @@ python3 wp-hunter.py
 WPHunter supports multiple output formats for flexible reporting:  
 
 - **TXT** → Saves only vulnerable site URLs (minimal report).  
-- **CSV** → Saves vulnerable sites with details (plugins, versions, CVEs).  
+- **CSV** → Saves vulnerable sites with details (plugins, versions, CVE).  
 - **JSON** → Saves full structured scan data (recommended for automation & integrations).  
 
 ---
@@ -148,8 +148,8 @@ $ wp-hunter --url https://pkmkb.pk
 
 ## ⚠️ Disclaimer  
 
-This project is for **educational and authorized penetration testing purposes only**.  
-Unauthorized usage may violate laws.  
+This project is for **educational and penetration testing purposes only**.  
+Unauthorized usage may violate laws. Indian Cyber Force is not responsible for any illegal activity.
 
 ---
 
