@@ -216,12 +216,12 @@ class Logger:
                     plugins_to_sites[plugin_slug] = set()
                 plugins_to_sites[plugin_slug].add(target_url)
 
-        report_dir = "vulnerable_sites"
-        if not os.path.exists(report_dir):
-            os.makedirs(report_dir)
+        saveVuln_sites = "VulnSites"
+        if not os.path.exists(saveVuln_sites):
+            os.makedirs(saveVuln_sites)
 
         for plugin_slug, urls_set in plugins_to_sites.items():
-            filename = os.path.join(report_dir, f"{plugin_slug}.txt")
+            filename = os.path.join(saveVuln_sites, f"{plugin_slug}.txt")
             try:
                 with open(filename, 'w', encoding='utf-8') as f:
 
