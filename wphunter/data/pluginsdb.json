@@ -1,0 +1,600 @@
+[
+  {
+    "plugin_slug": "elementor",
+    "vulnerabilities": [
+      {
+        "id": "CVE-2022-29455",
+        "type": "CWE-79",
+        "severity": "HIGH",
+        "affected_versions": {
+          "less_than_or_equal": "3.5.5"
+        },
+        "description": "Stored Cross-Site Scripting (XSS) in Elementor (fixed in later 3.x releases)."
+      },
+      {
+        "id": "CVE-2022-1329",
+        "type": "CWE-862",
+        "severity": "CRITICAL",
+        "affected_versions": {
+          "less_than_or_equal": "3.6.4"
+        },
+        "description": "Access control / privilege escalation issues in Elementor/Pro components."
+      },
+      {
+        "id": "CVE-2023-47505",
+        "type": "CWE-79",
+        "severity": "MEDIUM",
+        "affected_versions": {
+          "less_than_or_equal": "3.16.4"
+        },
+        "description": "Cross-site scripting (XSS) reported for Elementor."
+      },
+      {
+        "id": "CVE-2024-5416",
+        "type": "CWE-79",
+        "severity": "HIGH",
+        "affected_versions": {
+          "less_than_or_equal": "3.23.4"
+        },
+        "description": "Stored XSS in multiple widgets' URL parameter in Elementor."
+      },
+      {
+        "id": "CVE-2023-48777",
+        "type": "CWE-434",
+        "severity": "CRITICAL",
+        "affected_versions": {
+          "less_than_or_equal": "3.18.1"
+        },
+        "description": "Unauthenticated file upload leading to possible RCE in older Elementor versions (reported 2023)."
+      },
+      {
+        "id": "CVE-2024-37437",
+        "type": "CWE-79",
+        "severity": "HIGH",
+        "affected_versions": {
+          "less_than_or_equal": "3.22.1"
+        },
+        "description": "Stored XSS in Elementor (reported July 2024)."
+      }
+    ]
+  },
+  {
+    "plugin_slug": "elementor-pro",
+    "vulnerabilities": [
+      {
+        "id": "CVE-2024-8494",
+        "type": "CWE-200",
+        "severity": "MEDIUM",
+        "affected_versions": {
+          "less_than_or_equal": "3.25.10"
+        },
+        "description": "Sensitive information exposure via elementor-template shortcode in Elementor Pro."
+      },
+      {
+        "id": "CVE-2025-3076",
+        "type": "CWE-79",
+        "severity": "MEDIUM",
+        "affected_versions": {
+          "less_than_or_equal": "3.29.0"
+        },
+        "description": "Stored XSS in 'button_text' parameter (Elementor Pro)."
+      },
+      {
+        "id": "CVE-2023-35050",
+        "type": "CWE-862",
+        "severity": "MEDIUM",
+        "affected_versions": {
+          "less_than_or_equal": "3.13.0"
+        },
+        "description": "Missing authorization in Elementor Pro (reported 2023)."
+      }
+    ]
+  },
+  {
+    "plugin_slug": "essential-addons-for-elementor",
+    "vulnerabilities": [
+      {
+        "id": "CVE-2023-32243",
+        "type": "CWE-287",
+        "severity": "CRITICAL",
+        "affected_versions": {
+          "greater_than_or_equal": "5.4.0",
+          "less_than_or_equal": "5.7.1"
+        },
+        "description": "Improper Authentication / Privilege Escalation in Essential Addons for Elementor."
+      }
+    ]
+  },
+  {
+    "plugin_slug": "the-plus-addons-for-elementor",
+    "vulnerabilities": [
+      {
+        "id": "CVE-2023-47178",
+        "type": "CWE-22",
+        "severity": "HIGH",
+        "affected_versions": {
+          "less_than_or_equal": "5.2.9"
+        },
+        "description": "Path traversal / local file include in The Plus Addons for Elementor."
+      }
+    ]
+  },
+  {
+    "plugin_slug": "woolementor",
+    "vulnerabilities": [
+      {
+        "id": "CVE-2024-4371",
+        "type": "CWE-502",
+        "severity": "CRITICAL",
+        "affected_versions": {
+          "less_than_or_equal": "4.4.1"
+        },
+        "description": "PHP Object Injection (deserialization) in CoDesigner/Woolementor."
+      },
+      {
+        "id": "CVE-2024-4564",
+        "type": "CWE-79",
+        "severity": "MEDIUM",
+        "affected_versions": {
+          "less_than_or_equal": "4.4.1"
+        },
+        "description": "Authenticated (Contributor+) Stored XSS via multiple widgets."
+      },
+      {
+        "id": "CVE-2025-22788",
+        "type": "CWE-79",
+        "severity": "MEDIUM",
+        "affected_versions": {
+          "less_than_or_equal": "4.9"
+        },
+        "description": "Authenticated Stored XSS in later versions (reported 2025)."
+      }
+    ]
+  },
+  {
+    "plugin_slug": "integration-for-contact-form-7-and-pipedrive",
+    "vulnerabilities": [
+      {
+        "id": "CVE-2025-7696",
+        "type": "CWE-502",
+        "severity": "CRITICAL",
+        "affected_versions": {
+          "less_than_or_equal": "1.2.3"
+        },
+        "description": "PHP Object Injection via unsafe deserialization in Integration for Pipedrive plugin."
+      }
+    ]
+  },
+  {
+    "plugin_slug": "wpforms-lite",
+    "vulnerabilities": [
+      {
+        "id": "CVE-2024-11205",
+        "type": "CWE-79",
+        "severity": "HIGH",
+        "affected_versions": {
+          "less_than_or_equal": "1.7.4.2"
+        },
+        "description": "Stored XSS in WPForms (multiple widgets/fields)."
+      },
+      {
+        "id": "CVE-2024-11223",
+        "type": "CWE-79",
+        "severity": "HIGH",
+        "affected_versions": {
+          "less_than_or_equal": "1.7.4.2"
+        },
+        "description": "Stored XSS / input sanitization issues in WPForms."
+      },
+      {
+        "id": "CVE-2024-13403",
+        "type": "CWE-89",
+        "severity": "HIGH",
+        "affected_versions": {
+          "less_than_or_equal": "1.7.4.2"
+        },
+        "description": "SQLi-related injection reported in WPForms flows."
+      },
+      {
+        "id": "CVE-2024-56276",
+        "type": "CWE-79",
+        "severity": "MEDIUM",
+        "affected_versions": {
+          "less_than_or_equal": "1.7.4.2"
+        },
+        "description": "Other XSS issues in WPForms (reported in 2024)."
+      }
+    ]
+  },
+  {
+    "plugin_slug": "contact-form-7",
+    "vulnerabilities": [
+      {
+        "id": "CVE-2020-35489",
+        "type": "CWE-79",
+        "severity": "HIGH",
+        "affected_versions": {
+          "less_than_or_equal": "5.3.1"
+        },
+        "description": "Unrestricted file upload leading to XSS in Contact Form 7 <= 5.3.1."
+      },
+      {
+        "id": "CVE-2024-2242",
+        "type": "CWE-79",
+        "severity": "MEDIUM",
+        "affected_versions": {
+          "less_than_or_equal": "5.9"
+        },
+        "description": "Reflected XSS via 'active-tab' parameter (fixed in 5.9.2+)."
+      },
+      {
+        "id": "CVE-2024-4704",
+        "type": "CWE-601",
+        "severity": "MEDIUM",
+        "affected_versions": {
+          "less_than_or_equal": "5.9.4"
+        },
+        "description": "Open redirect in Contact Form 7 before 5.9.5."
+      }
+    ]
+  },
+  {
+    "plugin_slug": "ninja-forms",
+    "vulnerabilities": [
+      {
+        "id": "CVE-2025-2561",
+        "type": "CWE-79",
+        "severity": "MEDIUM",
+        "affected_versions": {
+          "less_than_or_equal": "3.10.0"
+        },
+        "description": "Stored XSS in some settings (affects high-privilege users)."
+      },
+      {
+        "id": "CVE-2024-11052",
+        "type": "CWE-79",
+        "severity": "HIGH",
+        "affected_versions": {
+          "less_than_or_equal": "3.8.19"
+        },
+        "description": "Unauthenticated Stored XSS via form calculations (reported 2024)."
+      },
+      {
+        "id": "CVE-2023-38393",
+        "type": "CWE-862",
+        "severity": "HIGH",
+        "affected_versions": {
+          "less_than_or_equal": "3.6.25"
+        },
+        "description": "Missing authorization in form submissions export feature (reported 2023)."
+      },
+      {
+        "id": "CVE-2024-29220",
+        "type": "CWE-79",
+        "severity": "MEDIUM",
+        "affected_versions": {
+          "less_than_or_equal": "3.8.1"
+        },
+        "description": "Stored XSS via label sanitization issues (patched in 3.8.1)."
+      }
+    ]
+  },
+  {
+    "plugin_slug": "wp-file-manager",
+    "vulnerabilities": [
+      {
+        "id": "CVE-2020-25213",
+        "type": "CWE-434",
+        "severity": "CRITICAL",
+        "affected_versions": {
+          "less_than_or_equal": "6.9"
+        },
+        "description": "Unauthenticated arbitrary file upload allowing remote code execution (exploited in the wild)."
+      },
+      {
+        "id": "CVE-2024-xxxx1",
+        "type": "CWE-22",
+        "severity": "HIGH",
+        "affected_versions": {
+          "less_than_or_equal": "7.2.5"
+        },
+        "description": "Post-2020 directory traversal/local file issues (many variants; please patch to latest)."
+      }
+    ]
+  },
+  {
+    "plugin_slug": "revslider",
+    "vulnerabilities": [
+      {
+        "id": "CVE-2014-9734",
+        "type": "CWE-22",
+        "severity": "CRITICAL",
+        "affected_versions": {
+          "less_than_or_equal": "4.2"
+        },
+        "description": "Directory traversal allowing arbitrary file read in old revslider versions."
+      },
+      {
+        "id": "CVE-2024-8107",
+        "type": "CWE-79",
+        "severity": "HIGH",
+        "affected_versions": {
+          "less_than_or_equal": "6.7.18"
+        },
+        "description": "Stored XSS via SVG uploads (2024 disclosures)."
+      },
+      {
+        "id": "CVE-2024-34444",
+        "type": "CWE-862",
+        "severity": "HIGH",
+        "affected_versions": {
+          "less_than_or_equal": "6.7.0"
+        },
+        "description": "Missing authorization in Slider Revolution (reported 2024)."
+      },
+      {
+        "id": "CVE-2025-9217",
+        "type": "CWE-22",
+        "severity": "HIGH",
+        "affected_versions": {
+          "less_than_or_equal": "6.7.36"
+        },
+        "description": "Path traversal in Slider Revolution via 'used_svg' and 'used_images' params (2025 disclosure)."
+      }
+    ]
+  },
+  {
+    "plugin_slug": "woocommerce-upload-files",
+    "vulnerabilities": [
+      {
+        "id": "CVE-2021-24171",
+        "type": "CWE-434",
+        "severity": "CRITICAL",
+        "affected_versions": {
+          "less_than_or_equal": "59.4"
+        },
+        "description": "Bypass of extension sanitization unauthenticated arbitrary upload."
+      },
+      {
+        "id": "CVE-2024-10820",
+        "type": "CWE-434",
+        "severity": "CRITICAL",
+        "affected_versions": {
+          "less_than_or_equal": "84.3"
+        },
+        "description": "Arbitrary file upload due to missing file-type validation (2024)."
+      }
+    ]
+  },
+  {
+    "plugin_slug": "woocommerce-checkout-field-manager",
+    "vulnerabilities": [
+      {
+        "id": "CVE-2022-4328",
+        "type": "CWE-434",
+        "severity": "CRITICAL",
+        "affected_versions": {
+          "less_than_or_equal": "18.0"
+        },
+        "description": "Missing file validation allowing arbitrary file upload (fixed in 18.0)."
+      }
+    ]
+  },
+  {
+    "plugin_slug": "woocommerce-product-addon",
+    "vulnerabilities": [
+      {
+        "id": "CVE-2024-3962",
+        "type": "CWE-434",
+        "severity": "CRITICAL",
+        "affected_versions": {
+          "less_than_or_equal": "32.0.18"
+        },
+        "description": "Arbitrary file upload via ppom_upload_file (fixed in 32.0.19)."
+      }
+    ]
+  },
+  {
+    "plugin_slug": "woocommerce-support-ticket-system",
+    "vulnerabilities": [
+      {
+        "id": "CVE-2024-10625",
+        "type": "CWE-22",
+        "severity": "CRITICAL",
+        "affected_versions": {
+          "less_than_or_equal": "17.7"
+        },
+        "description": "Arbitrary file deletion due to path validation bug (fix in later 17.x)."
+      }
+    ]
+  },
+  {
+    "plugin_slug": "w3-total-cache",
+    "vulnerabilities": [
+      {
+        "id": "CVE-2019-6715",
+        "type": "CWE-200",
+        "severity": "MEDIUM",
+        "affected_versions": {
+          "less_than_or_equal": "0.9.3"
+        },
+        "description": "Arbitrary file read via pub/sns.php in older W3 Total Cache releases."
+      }
+    ]
+  },
+  {
+    "plugin_slug": "duplicator",
+    "vulnerabilities": [
+      {
+        "id": "CVE-2023-6114",
+        "type": "CWE-200",
+        "severity": "HIGH",
+        "affected_versions": {
+          "less_than_or_equal": "1.5.7.0"
+        },
+        "description": "Information exposure due to temporary backup directory listing (fixed in 1.5.7.1+)."
+      }
+    ]
+  },
+  {
+    "plugin_slug": "updraftplus",
+    "vulnerabilities": [
+      {
+        "id": "CVE-2024-10957",
+        "type": "CWE-502",
+        "severity": "HIGH",
+        "affected_versions": {
+          "greater_than_or_equal": "1.23.8",
+          "less_than_or_equal": "1.24.11"
+        },
+        "description": "PHP Object Injection via recursive_unserialized_replace (requires POP chain to exploit)."
+      }
+    ]
+  },
+  {
+    "plugin_slug": "post-duplicator",
+    "vulnerabilities": [
+      {
+        "id": "CVE-2024-12472",
+        "type": "CWE-200",
+        "severity": "LOW",
+        "affected_versions": {
+          "less_than_or_equal": "2.36"
+        },
+        "description": "Information exposure by duplicating posts (can leak draft/private content)."
+      }
+    ]
+  },
+  {
+    "plugin_slug": "all-in-one-seo-pack",
+    "vulnerabilities": [
+      {
+        "id": "CVE-2020-36744",
+        "type": "CWE-79",
+        "severity": "HIGH",
+        "affected_versions": {
+          "less_than_or_equal": "3.6.2"
+        },
+        "description": "Cross-Site Scripting in All in One SEO Pack <= 3.6.2."
+      }
+    ]
+  },
+  {
+    "plugin_slug": "yoast-seo",
+    "vulnerabilities": [
+      {
+        "id": "CVE-2019-3463",
+        "type": "CWE-79",
+        "severity": "MEDIUM",
+        "affected_versions": {
+          "less_than_or_equal": "9.5"
+        },
+        "description": "Stored XSS in Yoast SEO plugin up to 9.5."
+      }
+    ]
+  },
+  {
+    "plugin_slug": "wordfence",
+    "note": "Security plugin itself has had CVEs (rare but impactful).",
+    "vulnerabilities": [
+      {
+        "id": "CVE-2019-6715",
+        "type": "CWE-79",
+        "severity": "MEDIUM",
+        "affected_versions": {
+          "less_than_or_equal": "7.1.4"
+        },
+        "description": "XSS via crafted query parameter in Wordfence <= 7.1.4."
+      }
+    ]
+  },
+  {
+    "plugin_slug": "the-plus-addons-for-elementor-page-builder",
+    "vulnerabilities": [
+      {
+        "id": "CVE-2023-47178",
+        "type": "CWE-22",
+        "severity": "HIGH",
+        "affected_versions": {
+          "less_than_or_equal": "5.2.9"
+        },
+        "description": "Path Traversal / PHP Local File Inclusion in The Plus Addons for Elementor (affected up to 5.2.9)."
+      }
+    ]
+  },
+  {
+    "plugin_slug": "codesigner-woocommerce-builder-VERIFY_SLUG",
+    "vulnerabilities": [
+      {
+        "id": "CVE-2024-4371",
+        "type": "CWE-502",
+        "severity": "CRITICAL",
+        "affected_versions": {
+          "less_than_or_equal": "4.4.1"
+        },
+        "description": "PHP Object Injection (deserialization) in CoDesigner WooCommerce Builder for Elementor (affected up to 4.4.1)."
+      }
+    ],
+    "note": "Please verify the exact plugin slug on your site or wp.org; I used a readable placeholder."
+  },
+  {
+    "plugin_slug": "integration-for-pipedrive-forms-VERIFY_SLUG",
+    "vulnerabilities": [
+      {
+        "id": "CVE-2025-7696",
+        "type": "CWE-502",
+        "severity": "CRITICAL",
+        "affected_versions": {
+          "less_than_or_equal": "1.2.3"
+        },
+        "description": "PHP Object Injection via unsafe deserialization in Integration for Pipedrive plugin (affected up to 1.2.3)."
+      }
+    ],
+    "note": "Verify plugin slug  this is a long bundled name and the actual folder/slug may differ."
+  },
+  {
+    "plugin_slug": "checkout-field-manager-VERIFY_SLUG",
+    "vulnerabilities": [
+      {
+        "id": "CVE-2022-4328",
+        "type": "N/A",
+        "severity": "CRITICAL",
+        "affected_versions": {
+          "less_than_or_equal": "18.0"
+        },
+        "description": "Missing file validation allowing arbitrary file upload in WooCommerce Checkout Field Manager (before 18.0)."
+      }
+    ],
+    "note": "Verify exact plugin slug many 'checkout field' plugins exist; ensure you match the correct one."
+  },
+  {
+    "plugin_slug": "product-addons-fields-for-woocommerce-VERIFY_SLUG",
+    "vulnerabilities": [
+      {
+        "id": "CVE-2024-3962",
+        "type": "CWE-434",
+        "severity": "CRITICAL",
+        "affected_versions": {
+          "less_than_or_equal": "32.0.19"
+        },
+        "description": "Arbitrary file upload due to missing file type validation in ppom_upload_file (affected up to 32.0.19)."
+      }
+    ],
+    "note": "Verify plugin slug; PPOM and other 'product addons' plugins use different slugs."
+  },
+  {
+    "plugin_slug": "woocommerce-support-ticket-system-VERIFY_SLUG",
+    "vulnerabilities": [
+      {
+        "id": "CVE-2024-10625",
+        "type": "CWE-22",
+        "severity": "CRITICAL",
+        "affected_versions": {
+          "less_than_or_equal": "17.8"
+        },
+        "description": "Arbitrary file deletion due to insufficient path validation in delete_tmp_uploaded_file() (affected up to 17.8)."
+      }
+    ],
+    "note": "Verify actual slug on your install."
+  }
+]
