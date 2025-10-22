@@ -38,28 +38,28 @@ cd wp-hunter
 pip3 install -r requirements.txt
 
 #Run
-python3 wphunter.py
+python3 wp-hunter.py
 
 ```
 ## 💻 Usage
 
 ### See available options:
 
-```wphunter.py --help```
+```wp-hunter.py --help```
 ### Scan Single Target
-```wphunter.py --url https://pkmkb.pk```
+```wp-hunter.py --url https://pkmkb.pk```
 ### Mass Scan
-```wphunter.py --targets targets.txt --threads 200 --output output.txt```
+```wp-hunter.py --targets targets.txt --threads 200 --output output.txt```
 ### Mass Scan With Threads
-```wphunter.py --targets targets.txt --threads 200 --output output.txt```
+```wp-hunter.py --targets targets.txt --threads 200 --output output.txt```
 ### User Enumurate
-```wphunter.py --url https://pkmkb.pk --users```
+```wp-hunter.py --url https://pkmkb.pk --users```
 ### Specific Plugin Scan
-```wphunter.py --url https://pkmkb.pk --plugin woocommerce```
+```wp-hunter.py --url https://pkmkb.pk --plugin woocommerce```
 ### Specific CVE Scan
-```wphunter.py --url https://pkmkb.pk --cve CVE-2021-34624```
+```wp-hunter.py --url https://pkmkb.pk --cve CVE-2021-34624```
 ### Save Vulnerable Sites In Vulnerable Plugin Name
-```wphunter.py --targets targets.txt --save-by-plugin```
+```wp-hunter.py --targets targets.txt --save-by-plugin```
 
 
 ## ⚙️ Command-Line Options  
@@ -96,7 +96,7 @@ WPHunter supports multiple output formats for flexible reporting:
 Example of scanning a target:  
 
 ```bash
-$ wphunter --url https://pkmkb.pk
+$ wp-hunter --url https://pkmkb.pk
 
 
 │ Vulnerable Targets                                                                                                                                                             
@@ -158,7 +158,4 @@ Unauthorized usage may violate laws.
 If you find **WPHunter** useful:  
 
 - ⭐ **Star the repo on GitHub**  
-- 🔗 **Share it with your community**  
-- 💬 **Contribute or provide feedback**  
-
-Your support helps the project grow! 🚀
+- 🔗 **Share it with your community** 
