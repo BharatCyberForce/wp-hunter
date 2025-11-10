@@ -10,7 +10,7 @@
 
 ---
 
-## 📖 Whats WP Hunter?  
+## Whats WP Hunter?  
 
 **WPHunter** is fastest WordPress vulnerability scanner designed for **Penetration Testers**  
 **mass scanning of WordPress sites**.
