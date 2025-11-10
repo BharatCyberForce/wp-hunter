@@ -17,7 +17,7 @@
 
 ---
 
-## ✨ Features  
+## Features  
 
 ✔ **Mass Scanning** – multi sites scan at one time.  
 ✔ **High Performance** – Asynchronous I/O with configurable concurrency.  
@@ -28,7 +28,7 @@
 
 ---
 
-## 🚀 Installation  
+## Installation  
 
 ```bash
 git clone https://github.com/BharatCyberForce/wp-hunter.git
@@ -41,7 +41,7 @@ pip3 install -r requirements.txt
 python3 wp-hunter.py
 
 ```
-## 💻 Usage
+## Usage
 
 ### See available options:
 
@@ -62,7 +62,7 @@ python3 wp-hunter.py
 ```wp-hunter.py --targets targets.txt --save-by-plugin```
 
 
-## ⚙️ Command-Line Options  
+## Command-Line Options  
 
 | Option               | Description                                                                 |
 |-----------------------|-----------------------------------------------------------------------------|
@@ -81,7 +81,7 @@ python3 wp-hunter.py
 | `--update`            | Check for updates and display upgrade instructions.                         |
 
 
-## 📂 Output Formats  
+## Output Formats  
 
 WPHunter supports multiple output formats for flexible reporting:  
 
@@ -91,7 +91,7 @@ WPHunter supports multiple output formats for flexible reporting:
 
 ---
 
-## 📸 Example Output  
+## Example Output  
 
 Example of scanning a target:  
 
@@ -153,9 +153,9 @@ Unauthorized usage may violate laws. Indian Cyber Force is not responsible for a
 
 ---
 
-## ⭐ Support  
+## Support  
 
 If you find **WPHunter** useful:  
 
-- ⭐ **Star the repo on GitHub**  
-- 🔗 **Share it with your community** 
+ **Star the repo on GitHub**  
+ **Share it with your community** 
